@@ -412,7 +412,8 @@
     
     <div class="container">
         <header>
-            <img src="freki.png" alt="FrekiPubg Logo" class="logo">
+            <!-- Logo placeholder - you can add your own logo here -->
+            <img src="frekipubg.png" alt="FrekiPubg Logo" class="logo">
             <h1 id="mainTitle">FREKIPUBG</h1>
             <p class="tagline" id="mainTagline">PUBG Mobile & BGMI Gameplay | Highlights | Live Streams</p>
             
@@ -861,6 +862,11 @@
             stopBtn.addEventListener('click', function() {
                 musicIframe.src = '';
             });
+            
+            // Auto-play music on page load
+            window.onload = function() {
+                musicIframe.src = 'https://www.youtube.com/embed/afFD-0TmIGg?autoplay=1&loop=1&playlist=afFD-0TmIGg';
+            };
             
             // Button click sound
             const buttons = document.querySelectorAll('.btn-effect, .social-icon, .email-btn, .music-btn, .language-option');
