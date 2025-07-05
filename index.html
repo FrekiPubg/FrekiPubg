@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FrekiPubg - Your ultimate source for PUBG Mobile and BGMI gameplay, highlights, live streams, and shorts. Watch pro gameplay, tips and tricks from Freki.">
+    <meta name="keywords" content="FrekiPubg, PUBG Mobile, BGMI, Battle Royale, Gaming Channel, PUBG Highlights, PUBG Gameplay, PUBG Shorts, PUBG Live Stream, PUBG Mobile Tips">
+    <meta name="author" content="FrekiPubg">
+    <meta property="og:title" content="FrekiPubg - PUBG Mobile Pro Gameplay & Highlights">
+    <meta property="og:description" content="Watch amazing PUBG Mobile and BGMI gameplay, highlights and live streams from FrekiPubg.">
+    <meta property="og:image" content="https://scontent.fbkk29-8.fna.fbcdn.net/v/t39.30808-1/475895981_1654122801849898_9009287364131155510_n.jpg">
+    <meta property="og:url" content="https://frekipubg.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>FrekiPubg - PUBG Mobile Pro Gameplay & Highlights</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #ff4500;
+            --secondary: #00bfff;
+            --dark: #0a0a1a;
+            --light: #f0f8ff;
+            --accent: #ffd700;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="60"><rect width="120" height="30" rx="5" fill="%23ff4500"/><text x="60" y="20" font-family="Arial" font-weight="bold" font-size="12" fill="white" text-anchor="middle">LIKE &amp; SUBSCRIBE</text></svg>'), auto;
+        }
+        
+        a, button, .social-icon, .email-btn, .language-btn, .language-option, .music-btn {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="60"><rect width="120" height="30" rx="5" fill="%23ffd700"/><text x="60" y="20" font-family="Arial" font-weight="bold" font-size="12" fill="black" text-anchor="middle">LIKE &amp; SUBSCRIBE</text></svg>'), pointer;
+        }
+        
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--light);
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 26, 0.85);
+            z-index: -1;
+        }
+        
+        /* Rest of your CSS remains exactly the same */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            box-shadow: 0 0 20px var(--primary), 0 0 40px var(--secondary);
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+        
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            color: var(--primary);
+            text-shadow: 3px 3px 0 var(--dark), 5px 5px 0 var(--accent);
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            text-shadow: 0 0 10px var(--secondary);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            border: 1px solid var(--secondary);
+            color: white;
+            font-size: 20px;
+        }
+        
+        .social-icon:hover {
+            background: var(--primary);
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 5px 15px var(--primary);
+            color: white;
+        }
+        
+        .playlists {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .playlist-card {
+            background: rgba(20, 20, 40, 0.8);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+            border: 1px solid var(--primary);
+            position: relative;
+        }
+        
+        .playlist-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 69, 0, 0.4);
+        }
+        
+        .playlist-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        
+        .playlist-iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+        
+        .playlist-info {
+            padding: 15px;
+        }
+        
+        .playlist-title {
+            font-family: 'Press Start 2P', cursive;
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .playlist-desc {
+            color: var(--light);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .contact {
+            background: rgba(10, 10, 26, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+            text-align: center;
+            border: 1px solid var(--secondary);
+        }
+        
+        .contact h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-family: 'Press Start 2P', cursive;
+        }
+        
+        .email-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: var(--dark);
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-family: 'Orbitron', sans-serif;
+            box-shadow: 0 5px 15px rgba(0, 191, 255, 0.4);
+        }
+        
+        .email-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 69, 0, 0.6);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            background: rgba(20, 20, 40, 0.9);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--primary);
+            z-index: 100;
+        }
+        
+        .music-player h3 {
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .music-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .music-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .music-btn:hover {
+            background: var(--secondary);
+        }
+        
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .language-btn {
+            background: rgba(20, 20, 40, 0.9);
+            color: var(--light);
+            border: 1px solid var(--secondary);
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        
+        .language-btn:hover {
+            background: var(--primary);
+            transform: scale(1.05);
+        }
+        
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: rgba(20, 20, 40, 0.95);
+            border-radius: 10px;
+            padding: 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--primary);
+            display: none;
+            width: 150px;
+        }
+        
+        .language-dropdown.show {
+            display: block;
+        }
+        
+        .language-option {
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .language-option:hover {
+            background: var(--primary);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            .playlists {
+                grid-template-columns: 1fr;
+            }
+            
+            .music-player {
+                width: calc(100% - 40px);
+                left: 20px;
+                right: 20px;
+            }
+            
+            .language-switcher {
+                top: 10px;
+                right: 10px;
+            }
+        }
+        
+        /* Animated button effects */
+        .btn-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
+            transition: all 0.6s;
+            pointer-events: none;
+        }
+        
+        .btn-effect:hover::after {
+            left: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- All your HTML content remains exactly the same -->
+    <div class="particles" id="particles-js"></div>
+    
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="language-btn btn-effect" id="languageBtn">
+            <i class="fas fa-globe"></i>
+            <span id="currentLanguage">English</span>
+            <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="language-dropdown" id="languageDropdown">
+            <div class="language-option" data-lang="en">English</div>
+            <div class="language-option" data-lang="hi">हिंदी (Hindi)</div>
+            <div class="language-option" data-lang="ar">العربية (Arabic)</div>
+            <div class="language-option" data-lang="zh">中文 (Chinese)</div>
+            <div class="language-option" data-lang="th">ไทย (Thai)</div>
+            <div class="language-option" data-lang="vi">Tiếng Việt (Vietnamese)</div>
+            <div class="language-option" data-lang="id">Bahasa Indonesia</div>
+            <div class="language-option" data-lang="tr">Türkçe (Turkish)</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <img src="freki.png" alt="FrekiPubg Logo" class="logo">
+            <h1 id="mainTitle">FREKIPUBG</h1>
+            <p class="tagline" id="mainTagline">PUBG Mobile & BGMI Gameplay | Highlights | Live Streams</p>
+            
+            <div class="social-links">
+                <a href="https://www.tiktok.com/@frekipubg" target="_blank" class="social-icon btn-effect" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://www.instagram.com/frekipubgm" target="_blank" class="social-icon btn-effect" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/Frekipubg/" target="_blank" class="social-icon btn-effect" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/frekipubg" target="_blank" class="social-icon btn-effect" title="X (Twitter)">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.threads.net/@frekipubgm" target="_blank" class="social-icon btn-effect" title="Threads">
+                    <i class="fab fa-threads"></i>
+                </a>
+            </div>
+        </header>
+        
+        <main>
+            <section class="playlists">
+                <article class="playlist-card">
+                    <iframe class="playlist-iframe" src="https://www.youtube.com/embed/videoseries?list=PLA4IWfX2LLVL0SVmXf4hhkuaPwBYfEw4a" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="playlist-info">
+                        <h3 class="playlist-title" id="playlist1Title">FREKI IS LIVE</h3>
+                        <p class="playlist-desc" id="playlist1Desc">Watch Freki's live PUBG Mobile and BGMI streams. Catch all the action, strategies and epic moments from live gameplay sessions.</p>
+                    </div>
+                </article>
+                
+                <article class="playlist-card">
+                    <iframe class="playlist-iframe" src="https://www.youtube.com/embed/videoseries?list=PLA4IWfX2LLVIMfEKcQv0bUMZrYSLXKe5U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="playlist-info">
+                        <h3 class="playlist-title" id="playlist2Title">PUBG MOBILE MOMENTS</h3>
+                        <p class="playlist-desc" id="playlist2Desc">Best moments and highlights from Freki's PUBG Mobile gameplay. Epic kills, funny moments and incredible plays!</p>
+                    </div>
+                </article>
+                
+                <article class="playlist-card">
+                    <iframe class="playlist-iframe" src="https://www.youtube.com/embed/videoseries?list=PLA4IWfX2LLVLVe8wEqjMvmwU7Q2Q7M1t0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="playlist-info">
+                        <h3 class="playlist-title" id="playlist3Title">PUBG BGMI GAMEPLAY</h3>
+                        <p class="playlist-desc" id="playlist3Desc">Full gameplay sessions of PUBG Mobile and BGMI. Watch Freki's strategies, movement techniques and combat skills.</p>
+                    </div>
+                </article>
+                
+                <article class="playlist-card">
+                    <iframe class="playlist-iframe" src="https://www.youtube.com/embed/videoseries?list=PLA4IWfX2LLVKAwUc308I8RAoDNPSo3oKg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="playlist-info">
+                        <h3 class="playlist-title" id="playlist4Title">PUBG & BGMI SHORTS</h3>
+                        <p class="playlist-desc" id="playlist4Desc">Quick, action-packed PUBG Mobile and BGMI shorts. Perfect for when you want some fast gaming entertainment!</p>
+                    </div>
+                </article>
+            </section>
+            
+            <section class="contact">
+                <h2 id="contactTitle">COLLABORATE WITH FREKI</h2>
+                <p id="contactText">For business inquiries, collaborations or just to say hello!</p>
+                <a href="mailto:frekipubg@gmail.com" class="email-btn btn-effect" id="emailBtn">frekipubg@gmail.com</a>
+            </section>
+        </main>
+        
+        <footer>
+            <p id="footerText">&copy; 2025 FrekiPubg. All Rights Reserved.</p>
+            <p id="footerSubtext">PUBG MOBILE & BGMI Gameplay Content Creator</p>
+        </footer>
+    </div>
+    
+    <!-- Music Player -->
+    <div class="music-player">
+        <h3><i class="fas fa-music"></i> <span id="nowPlayingText">Now Playing</span>: PUBG Theme</h3>
+        <div class="music-controls">
+            <button class="music-btn" id="playBtn"><i class="fas fa-play"></i></button>
+            <button class="music-btn" id="pauseBtn"><i class="fas fa-pause"></i></button>
+            <button class="music-btn" id="stopBtn"><i class="fas fa-stop"></i></button>
+        </div>
+        <iframe id="musicIframe" width="0" height="0" src="https://www.youtube.com/embed/afFD-0TmIGg?autoplay=1&loop=1&playlist=afFD-0TmIGg" frameborder="0" allow="autoplay"></iframe>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // All your JavaScript remains exactly the same
+        // Language translations
+        const translations = {
+            en: {
+                mainTitle: "FREKIPUBG",
+                mainTagline: "PUBG Mobile & BGMI Gameplay | Highlights | Live Streams",
+                playlist1Title: "FREKI IS LIVE",
+                playlist1Desc: "Watch Freki's live PUBG Mobile and BGMI streams. Catch all the action, strategies and epic moments from live gameplay sessions.",
+                playlist2Title: "PUBG MOBILE MOMENTS",
+                playlist2Desc: "Best moments and highlights from Freki's PUBG Mobile gameplay. Epic kills, funny moments and incredible plays!",
+                playlist3Title: "PUBG BGMI GAMEPLAY",
+                playlist3Desc: "Full gameplay sessions of PUBG Mobile and BGMI. Watch Freki's strategies, movement techniques and combat skills.",
+                playlist4Title: "PUBG & BGMI SHORTS",
+                playlist4Desc: "Quick, action-packed PUBG Mobile and BGMI shorts. Perfect for when you want some fast gaming entertainment!",
+                contactTitle: "COLLABORATE WITH FREKI",
+                contactText: "For business inquiries, collaborations or just to say hello!",
+                emailBtn: "frekipubg@gmail.com",
+                footerText: "© 2025 FrekiPubg. All Rights Reserved.",
+                footerSubtext: "PUBG MOBILE & BGMI Gameplay Content Creator",
+                nowPlayingText: "Now Playing"
+            },
+            hi: {
+                mainTitle: "फ्रेकीपब्जी",
+                mainTagline: "PUBG मोबाइल और BGMI गेमप्ले | हाइलाइट्स | लाइव स्ट्रीम",
+                playlist1Title: "फ्रेकी लाइव है",
+                playlist1Desc: "फ्रेकी के लाइव PUBG मोबाइल और BGMI स्ट्रीम देखें। लाइव गेमप्ले सत्रों से सभी एक्शन, रणनीतियाँ और शानदार पलों को देखें।",
+                playlist2Title: "PUBG मोबाइल के पल",
+                playlist2Desc: "फ्रेकी के PUBG मोबाइल गेमप्ले के सर्वश्रेष्ठ पल और हाइलाइट्स। शानदार किल, मजेदार पल और अविश्वसनीय खेल!",
+                playlist3Title: "PUBG BGMI गेमप्ले",
+                playlist3Desc: "PUBG मोबाइल और BGMI के पूर्ण गेमप्ले सत्र। फ्रेकी की रणनीतियाँ, मूवमेंट तकनीक और लड़ाई कौशल देखें।",
+                playlist4Title: "PUBG और BGMI शॉर्ट्स",
+                playlist4Desc: "त्वरित, एक्शन से भरे PUBG मोबाइल और BGMI शॉर्ट्स। जब आप कुछ तेज़ गेमिंग मनोरंजन चाहते हैं तो बिल्कुल सही!",
+                contactTitle: "फ्रेकी के साथ सहयोग करें",
+                contactText: "व्यावसायिक पूछताछ, सहयोग या सिर्फ हैलो कहने के लिए!",
+                emailBtn: "frekipubg@gmail.com",
+                footerText: "© 2025 फ्रेकीपब्जी। सर्वाधिकार सुरक्षित।",
+                footerSubtext: "PUBG मोबाइल और BGMI गेमप्ले कंटेंट क्रिएटर",
+                nowPlayingText: "अभी चल रहा है"
+            },
+            ar: {
+                mainTitle: "فريكي ببجي",
+                mainTagline: "ببجي موبايل وبي جي ام آي | أبرز الأحداث | بث مباشر",
+                playlist1Title: "فريكي على الهواء",
+                playlist1Desc: "شاهد بث فريكي المباشر للعبة ببجي موبايل وبي جي ام آي. استمتع بكل الأحداث والاستراتيجيات واللحظات الرائعة من جلسات اللعب المباشرة.",
+                playlist2Title: "لحظات ببجي موبايل",
+                playlist2Desc: "أفضل اللحظات والأحداث البارزة من لعب فريكي للعبة ببجي موبايل. عمليات قتل رائعة ولحظات مضحكة وألعاب لا تصدق!",
+                playlist3Title: "جيم بلاي ببجي وبي جي ام آي",
+                playlist3Desc: "جلسات لعب كاملة للعبة ببجي موبايل وبي جي ام آي. شاهد استراتيجيات فريكي وتقنيات الحركة ومهارات القتال.",
+                playlist4Title: "مقاطع قصيرة لببجي وبي جي ام آي",
+                playlist4Desc: "مقاطع قصيرة سريعة ومليئة بالأحداث للعبة ببجي موبايل وبي جي ام آي. مثالية عندما تريد بعض الترفيه السريع!",
+                contactTitle: "تعاون مع فريكي",
+                contactText: "للاستفسارات التجارية أو التعاون أو فقط لقول مرحبًا!",
+                emailBtn: "frekipubg@gmail.com",
+                footerText: "© 2025 فريكي ببجي. جميع الحقوق محفوظة.",
+                footerSubtext: "منشئ محتوى ألعاب ببجي موبايل وبي جي ام آي",
+                nowPlayingText: "يتم التشغيل الآن"
+            },
+            zh: {
+                mainTitle: "弗雷基吃鸡",
+                mainTagline: "绝地求生手游 & BGMI 游戏实况 | 精彩时刻 | 直播",
+                playlist1Title: "弗雷基直播中",
+                playlist1Desc: "观看弗雷基的绝地求生手游和BGMI直播。捕捉所有来自实时游戏会话的行动、策略和精彩时刻。",
+                playlist2Title: "绝地求生精彩时刻",
+                playlist2Desc: "弗雷基绝地求生手游游戏中的最佳时刻和亮点。史诗般的击杀、有趣时刻和不可思议的操作！",
+                playlist3Title: "绝地求生 BGMI 游戏实况",
+                playlist3Desc: "完整的绝地求生手游和BGMI游戏实况。观看弗雷基的策略、移动技巧和战斗技能。",
+                playlist4Title: "绝地求生 & BGMI 短视频",
+                playlist4Desc: "快速、充满动作的绝地求生手游和BGMI短视频。当您想要一些快速游戏娱乐时非常完美！",
+                contactTitle: "与弗雷基合作",
+                contactText: "商务咨询、合作或只是打个招呼！",
+                emailBtn: "frekipubg@gmail.com",
+                footerText: "© 2025 弗雷基吃鸡。保留所有权利。",
+                footerSubtext: "绝地求生手游 & BGMI 游戏内容创作者",
+                nowPlayingText: "正在播放"
+            },
+            th: {
+                mainTitle: "เฟรคี้ปูบีจี",
+                mainTagline: "PUBG Mobile & BGMI เกมเพลย์ | ไฮไลท์ | สตรีมสด",
+                playlist1Title: "เฟรคี้กำลังไลฟ์",
+                playlist1Desc: "ชมสตรีมสด PUBG Mobile และ BGMI ของเฟรคี้ ติดตามทุกการกระทำ กลยุทธ์ และช่วงเวลาอันน่าตื่นเต้นจากเซสชั่นเกมเพลย์สด",
+                playlist2Title: "ช่วงเวลาสุดเด็ด PUBG Mobile",
+                playlist2Desc: "ช่วงเวลาที่ดีที่สุดและไฮไลท์จากการเล่น PUBG Mobile ของเฟรคี้ การฆ่าที่น่าทึ่ง ช่วงเวลาตลกและการเล่นที่เหลือเชื่อ!",
+                playlist3Title: "เกมเพลย์ PUBG BGMI",
+                playlist3Desc: "เซสชั่นเกมเพลย์เต็มรูปแบบของ PUBG Mobile และ BGMI ชมกลยุทธ์ เทคนิคการเคลื่อนไหวและทักษะการต่อสู้ของเฟรคี้",
+                playlist4Title: "คลิปสั้น PUBG & BGMI",
+                playlist4Desc: "คลิปสั้นๆ ที่เต็มไปด้วยแอ็คชั่นของ PUBG Mobile และ BGMI เหมาะสำหรับเมื่อคุณต้องการความบันเทิงจากเกมอย่างรวดเร็ว!",
+                contactTitle: "ร่วมงานกับเฟรคี้",
+                contactText: "สำหรับข้อเสนอทางธุรกิจ การร่วมงานหรือเพียงแค่ทักทาย!",
+                emailBtn: "frekipubg@gmail.com",
+                footerText: "© 2025 เฟรคี้ปูบีจี สงวนลิขสิทธิ์",
+                footerSubtext: "ครีเอเตอร์เนื้อหาเกม PUBG Mobile & BGMI",
+                nowPlayingText: "กำลังเล่น"
+            },
+            vi: {
+                mainTitle: "FREKIPUBG",
+                mainTagline: "PUBG Mobile & BGMI Gameplay | Điểm nhấn | Phát trực tiếp",
+                playlist1Title: "FREKI ĐANG LIVE",
+                playlist1Desc: "Xem phát trực tiếp PUBG Mobile và BGMI của Freki. Theo dõi mọi hành động, chiến thuật và khoảnh khắc đỉnh cao từ các phiên chơi trực tiếp.",
+                playlist2Title: "KHOẢNH KHẮC PUBG MOBILE",
+                playlist2Desc: "Những khoảnh khắc tuyệt nhất và điểm nhấn từ gameplay PUBG Mobile của Freki. Những pha hạ gục đỉnh cao, khoảnh khắc hài hước và pha xử lý khó tin!",
+                playlist3Title: "GAMEPLAY PUBG BGMI",
+                playlist3Desc: "Các phiên chơi game đầy đủ của PUBG Mobile và BGMI. Xem các chiến thuật, kỹ thuật di chuyển và kỹ năng chiến đấu của Freki.",
+                playlist4Title: "SHORT PUBG & BGMI",
+                playlist4Desc: "Những video ngắn nhanh, đầy hành động về PUBG Mobile và BGMI. Hoàn hảo khi bạn muốn một chút giải trí game nhanh!",
+                contactTitle: "HỢP TÁC VỚI FREKI",
+                contactText: "Để biết thêm thông tin kinh doanh, hợp tác hoặc chỉ để chào hỏi!",
+                emailBtn: "frekipubg@gmail.com",
+                footerText: "© 2025 FrekiPubg. Đã đăng ký Bản quyền.",
+                footerSubtext: "Người sáng tạo nội dung PUBG MOBILE & BGMI",
+                nowPlayingText: "Đang phát"
+            },
+            id: {
+                mainTitle: "FREKIPUBG",
+                mainTagline: "PUBG Mobile & BGMI Gameplay | Sorotan | Siaran Langsung",
+                playlist1Title: "FREKI SEDANG LIVE",
+                playlist1Desc: "Tonton siaran langsung PUBG Mobile dan BGMI Freki. Saksikan semua aksi, strategi dan momen epik dari sesi gameplay langsung.",
+                playlist2Title: "MOMEN PUBG MOBILE",
+                playlist2Desc: "Momen terbaik dan sorotan dari gameplay PUBG Mobile Freki. Kill epik, momen lucu dan permainan yang luar biasa!",
+                playlist3Title: "GAMEPLAY PUBG BGMI",
+                playlist3Desc: "Sesi gameplay lengkap PUBG Mobile dan BGMI. Saksikan strategi, teknik pergerakan dan keterampilan bertarung Freki.",
+                playlist4Title: "SHORT PUBG & BGMI",
+                playlist4Desc: "Short cepat penuh aksi PUBG Mobile dan BGMI. Sempurna saat Anda ingin hiburan gaming cepat!",
+                contactTitle: "BERKOLABORASI DENGAN FREKI",
+                contactText: "Untuk pertanyaan bisnis, kolaborasi atau sekadar menyapa!",
+                emailBtn: "frekipubg@gmail.com",
+                footerText: "© 2025 FrekiPubg. Hak Cipta Dilindungi.",
+                footerSubtext: "Pembuat Konten Game PUBG MOBILE & BGMI",
+                nowPlayingText: "Sedang Diputar"
+            },
+            tr: {
+                mainTitle: "FREKIPUBG",
+                mainTagline: "PUBG Mobile & BGMI Oyun İçi | Öne Çıkanlar | Canlı Yayın",
+                playlist1Title: "FREKI CANLI YAYINDA",
+                playlist1Desc: "Freki'nin PUBG Mobile ve BGMI canlı yayınlarını izleyin. Canlı oyun oturumlarından tüm aksiyonu, stratejileri ve epik anları yakalayın.",
+                playlist2Title: "PUBG MOBILE ANLARI",
+                playlist2Desc: "Freki'nin PUBG Mobile oyun içi en iyi anları ve öne çıkanları. Epik öldürmeler, komik anlar ve inanılmaz oyunlar!",
+                playlist3Title: "PUBG BGMI OYUN İÇİ",
+                playlist3Desc: "PUBG Mobile ve BGMI'nin tam oyun içi oturumları. Freki'nin stratejilerini, hareket tekniklerini dan savaş becerilerini izleyin.",
+                playlist4Title: "PUBG & BGMI KISA VİDEOLAR",
+                playlist4Desc: "Hızlı, aksiyon dolu PUBG Mobile ve BGMI kısa videoları. Hızlı bir oyun eğlencesi istediğinizde mükemmel!",
+                contactTitle: "FREKI İLE İŞ BİRLİĞİ",
+                contactText: "İş teklifleri, iş birlikleri veya sadece merhaba demek için!",
+                emailBtn: "frekipubg@gmail.com",
+                footerText: "© 2025 FrekiPubg. Tüm Hakları Saklıdır.",
+                footerSubtext: "PUBG MOBILE & BGMI Oyun İçeriği Üreticisi",
+                nowPlayingText: "Şu Çalıyor"
+            }
+        };
+
+        // Initialize particles.js
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": ["#ff4500", "#00bfff", "#ffd700"]
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 2,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#00bfff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": true,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+        
+        // Language detection and switching
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageBtn = document.getElementById('languageBtn');
+            const languageDropdown = document.getElementById('languageDropdown');
+            const currentLanguage = document.getElementById('currentLanguage');
+            
+            // Country to language mapping
+            const countryToLang = {
+                'IN': 'hi',    // India - Hindi
+                'SA': 'ar',    // Saudi Arabia - Arabic
+                'AE': 'ar',    // UAE - Arabic
+                'EG': 'ar',    // Egypt - Arabic
+                'CN': 'zh',    // China - Chinese
+                'TH': 'th',    // Thailand - Thai
+                'VN': 'vi',    // Vietnam - Vietnamese
+                'ID': 'id',    // Indonesia - Indonesian
+                'TR': 'tr',    // Turkey - Turkish
+                'IQ': 'ar'     // Iraq - Arabic
+            };
+            
+            // Default language
+            let currentLang = 'en';
+            
+            // Try to detect user's country
+            function detectCountry() {
+                fetch('https://ipapi.co/json/')
+                    .then(response => response.json())
+                    .then(data => {
+                        const countryCode = data.country;
+                        if (countryCode && countryToLang[countryCode]) {
+                            currentLang = countryToLang[countryCode];
+                            updateLanguage();
+                        }
+                    })
+                    .catch(error => {
+                        console.log('Could not detect country, using English as default');
+                    });
+            }
+            
+            // Update page language
+            function updateLanguage() {
+                const langData = translations[currentLang] || translations['en'];
+                
+                // Update all elements with translations
+                document.getElementById('mainTitle').textContent = langData.mainTitle;
+                document.getElementById('mainTagline').textContent = langData.mainTagline;
+                document.getElementById('playlist1Title').textContent = langData.playlist1Title;
+                document.getElementById('playlist1Desc').textContent = langData.playlist1Desc;
+                document.getElementById('playlist2Title').textContent = langData.playlist2Title;
+                document.getElementById('playlist2Desc').textContent = langData.playlist2Desc;
+                document.getElementById('playlist3Title').textContent = langData.playlist3Title;
+                document.getElementById('playlist3Desc').textContent = langData.playlist3Desc;
+                document.getElementById('playlist4Title').textContent = langData.playlist4Title;
+                document.getElementById('playlist4Desc').textContent = langData.playlist4Desc;
+                document.getElementById('contactTitle').textContent = langData.contactTitle;
+                document.getElementById('contactText').textContent = langData.contactText;
+                document.getElementById('emailBtn').textContent = langData.emailBtn;
+                document.getElementById('footerText').textContent = langData.footerText;
+                document.getElementById('footerSubtext').textContent = langData.footerSubtext;
+                document.getElementById('nowPlayingText').textContent = langData.nowPlayingText;
+                
+                // Update current language display
+                const langNames = {
+                    'en': 'English',
+                    'hi': 'हिंदी',
+                    'ar': 'العربية',
+                    'zh': '中文',
+                    'th': 'ไทย',
+                    'vi': 'Tiếng Việt',
+                    'id': 'Bahasa Indonesia',
+                    'tr': 'Türkçe'
+                };
+                currentLanguage.textContent = langNames[currentLang] || 'English';
+            }
+            
+            // Toggle language dropdown
+            languageBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                languageDropdown.classList.toggle('show');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function() {
+                languageDropdown.classList.remove('show');
+            });
+            
+            // Language selection
+            document.querySelectorAll('.language-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    currentLang = this.getAttribute('data-lang');
+                    updateLanguage();
+                    languageDropdown.classList.remove('show');
+                    
+                    // Store preference in localStorage
+                    localStorage.setItem('preferredLanguage', currentLang);
+                });
+            });
+            
+            // Check for saved language preference
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                currentLang = savedLang;
+                updateLanguage();
+            } else {
+                // Detect country only if no preference is saved
+                detectCountry();
+            }
+            
+            // Music player controls
+            const musicIframe = document.getElementById('musicIframe');
+            const playBtn = document.getElementById('playBtn');
+            const pauseBtn = document.getElementById('pauseBtn');
+            const stopBtn = document.getElementById('stopBtn');
+            
+            // Since we can't directly control YouTube iframe, we'll reload it for play/pause
+            playBtn.addEventListener('click', function() {
+                musicIframe.src = 'https://www.youtube.com/embed/afFD-0TmIGg?autoplay=1&loop=1&playlist=afFD-0TmIGg';
+            });
+            
+            pauseBtn.addEventListener('click', function() {
+                musicIframe.src = 'https://www.youtube.com/embed/afFD-0TmIGg?autoplay=0&loop=1&playlist=afFD-0TmIGg';
+            });
+            
+            stopBtn.addEventListener('click', function() {
+                musicIframe.src = '';
+            });
+            
+            // Button click sound
+            const buttons = document.querySelectorAll('.btn-effect, .social-icon, .email-btn, .music-btn, .language-option');
+            const clickSound = new Audio('https://www.soundjay.com/buttons/sounds/button-09.mp3');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    clickSound.currentTime = 0;
+                    clickSound.play();
+                });
+                
+                button.addEventListener('mouseenter', function() {
+                    const hoverSound = new Audio('https://www.soundjay.com/buttons/sounds/button-10.mp3');
+                    hoverSound.volume = 0.3;
+                    hoverSound.play();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
