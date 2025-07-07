@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FrekiPubg - Your ultimate source for PUBG Mobile and BGMI gameplay, highlights, live streams, and shorts. Watch pro gameplay, tips and tricks from Freki.">
-    <meta name="keywords" content="FrekiPubg, PUBG Mobile, BGMI, Battle Royale, Gaming Channel, PUBG Highlights, PUBG Gameplay, PUBG Shorts, PUBG Live Stream, PUBG Mobile Tips">
+    <meta name="description" content="FrekiPubg - Best PUBG Mobile & BGMI gameplay videos, highlights, live streams. Get PUBG Mobile tips, tricks, sensitivity settings 2025, and watch epic solo vs squad clutches.">
+    <meta name="keywords" content="PUBG Mobile, BGMI, PUBG Mobile gameplay, PUBG Mobile video, PUBG Mobile updates, PUBG Mobile achievements, PUBG Mobile tips, PUBG Mobile tricks, PUBG Mobile sensitivity 2025, PUBG Mobile live, PUBG highlights, FrekiPubg">
     <meta name="author" content="FrekiPubg">
-    <meta property="og:title" content="FrekiPubg - PUBG Mobile Pro Gameplay & Highlights">
-    <meta property="og:description" content="Watch amazing PUBG Mobile and BGMI gameplay, highlights and live streams from FrekiPubg.">
+    <meta property="og:title" content="FrekiPubg - Best PUBG Mobile Gameplay & Highlights 2025">
+    <meta property="og:description" content="Watch amazing PUBG Mobile and BGMI gameplay videos, highlights, live streams. Get PUBG Mobile tips, tricks, and sensitivity settings 2025.">
     <meta property="og:image" content="https://scontent.fbkk29-8.fna.fbcdn.net/v/t39.30808-1/475895981_1654122801849898_9009287364131155510_n.jpg">
-    <meta property="og:url" content="https://frekipubg.com">
+    <meta property="og:url" content="https://frekipubg.github.io/FrekiPubg/">
+    <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <title>FrekiPubg - PUBG Mobile Pro Gameplay & Highlights</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&display=swap">
+    <meta name="twitter:title" content="FrekiPubg - PUBG Mobile Pro Gameplay & Highlights">
+    <meta name="twitter:description" content="Best PUBG Mobile & BGMI gameplay videos, highlights, live streams. PUBG Mobile tips, tricks, and sensitivity settings 2025.">
+    <meta name="twitter:image" content="https://scontent.fbkk29-8.fna.fbcdn.net/v/t39.30808-1/475895981_1654122801849898_9009287364131155510_n.jpg">
+    <title>FrekiPubg - Best PUBG Mobile Gameplay Videos & Highlights 2025</title>
+    <link rel="canonical" href="https://frekipubg.github.io/FrekiPubg/">
+    <!-- New gaming fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Rajdhani:wght@500;700&family=Audiowide&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -35,7 +41,7 @@
         }
         
         body {
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Rajdhani', sans-serif;
             background: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
             background-size: cover;
             color: var(--light);
@@ -54,7 +60,6 @@
             z-index: -1;
         }
         
-        /* Rest of your CSS remains exactly the same */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -84,19 +89,24 @@
             transform: scale(1.05) rotate(5deg);
         }
         
-        h1 {
-            font-family: 'Press Start 2P', cursive;
+        h1, h2, h3, .playlist-title {
+            font-family: 'Bungee', cursive;
             color: var(--primary);
-            text-shadow: 3px 3px 0 var(--dark), 5px 5px 0 var(--accent);
+            text-shadow: 2px 2px 0 var(--dark), 4px 4px 0 var(--accent);
             margin-bottom: 10px;
+        }
+        
+        h1 {
             font-size: 2.5rem;
         }
         
         .tagline {
+            font-family: 'Audiowide', cursive;
             font-size: 1.2rem;
             margin-bottom: 20px;
             color: var(--secondary);
             text-shadow: 0 0 10px var(--secondary);
+            letter-spacing: 1px;
         }
         
         .social-links {
@@ -126,6 +136,39 @@
             transform: translateY(-5px) scale(1.1);
             box-shadow: 0 5px 15px var(--primary);
             color: white;
+        }
+        
+        /* YouTube Subscribe Button */
+        .subscribe-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .subscribe-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #ff0000;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
+            border: none;
+        }
+        
+        .subscribe-btn:hover {
+            background: #cc0000;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.6);
+        }
+        
+        .subscribe-btn i {
+            margin-right: 10px;
+            font-size: 1.5rem;
         }
         
         .playlists {
@@ -171,8 +214,6 @@
         }
         
         .playlist-title {
-            font-family: 'Press Start 2P', cursive;
-            color: var(--accent);
             margin-bottom: 10px;
             font-size: 1rem;
         }
@@ -195,7 +236,6 @@
         .contact h2 {
             color: var(--primary);
             margin-bottom: 20px;
-            font-family: 'Press Start 2P', cursive;
         }
         
         .email-btn {
@@ -210,13 +250,56 @@
             transition: all 0.3s;
             border: none;
             cursor: pointer;
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Rajdhani', sans-serif;
             box-shadow: 0 5px 15px rgba(0, 191, 255, 0.4);
         }
         
         .email-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(255, 69, 0, 0.6);
+        }
+        
+        /* Channel Description Section */
+        .channel-description {
+            background: rgba(20, 20, 40, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            border: 1px solid var(--primary);
+        }
+        
+        .channel-description h2 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .channel-description p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .channel-features {
+            margin-top: 20px;
+        }
+        
+        .channel-features ul {
+            columns: 2;
+            list-style-type: none;
+        }
+        
+        .channel-features li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .channel-features li:before {
+            content: '✓';
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
         }
         
         footer {
@@ -299,6 +382,7 @@
             align-items: center;
             gap: 8px;
             transition: all 0.3s;
+            font-family: 'Rajdhani', sans-serif;
         }
         
         .language-btn:hover {
@@ -327,6 +411,7 @@
             padding: 8px 15px;
             cursor: pointer;
             transition: all 0.2s;
+            font-family: 'Rajdhani', sans-serif;
         }
         
         .language-option:hover {
@@ -361,6 +446,10 @@
                 top: 10px;
                 right: 10px;
             }
+            
+            .channel-features ul {
+                columns: 1;
+            }
         }
         
         /* Animated button effects */
@@ -388,7 +477,6 @@
     </style>
 </head>
 <body>
-    <!-- All your HTML content remains exactly the same -->
     <div class="particles" id="particles-js"></div>
     
     <!-- Language Switcher -->
@@ -412,7 +500,6 @@
     
     <div class="container">
         <header>
-            <!-- Logo placeholder - you can add your own logo here -->
             <img src="frekipubg.png" alt="FrekiPubg Logo" class="logo">
             <h1 id="mainTitle">FREKIPUBG</h1>
             <p class="tagline" id="mainTagline">PUBG Mobile & BGMI Gameplay | Highlights | Live Streams</p>
@@ -432,6 +519,13 @@
                 </a>
                 <a href="https://www.threads.net/@frekipubgm" target="_blank" class="social-icon btn-effect" title="Threads">
                     <i class="fab fa-threads"></i>
+                </a>
+            </div>
+            
+            <!-- YouTube Subscribe Button -->
+            <div class="subscribe-container">
+                <a href="https://www.youtube.com/@FrekiPubg?sub_confirmation=1" target="_blank" class="subscribe-btn btn-effect">
+                    <i class="fab fa-youtube"></i> Subscribe Now
                 </a>
             </div>
         </header>
@@ -471,6 +565,37 @@
                 </article>
             </section>
             
+            <!-- Channel Description Section -->
+            <section class="channel-description">
+                <h2>🎮 Welcome to FrekiPubg!</h2>
+                <p>PUBG Mobile gameplay, From intense solo vs squad clutches, to insane sniper shots, and epic chicken dinner wins, I bring you high-quality gameplay, pubg tips and tricks, to level up your game.</p>
+                
+                <div class="channel-features">
+                    <h3>✅ What You'll Find on Our Channel:</h3>
+                    <ul>
+                        <li>PUBG Mobile Live</li>
+                        <li>PUBG Highlights</li>
+                        <li>BGMI Gameplay</li>
+                        <li>PUBG Esports</li>
+                        <li>PUBG Battlegrounds</li>
+                        <li>BGMI Live Stream</li>
+                        <li>Pubg Live</li>
+                        <li>PUBG Funny Moments</li>
+                        <li>PUBG Rush Gameplay 2025</li>
+                        <li>PUBG sensitivity settings 2025</li>
+                    </ul>
+                </div>
+                
+                <p>💥 Hit Subscribe and turn on the 🔔 for regular uploads and exclusive content.</p>
+                <p>👾 Let's conquer the battlegrounds together!</p>
+                
+                <div class="subscribe-container" style="margin-top: 20px;">
+                    <a href="https://www.youtube.com/@FrekiPubg?sub_confirmation=1" target="_blank" class="subscribe-btn btn-effect">
+                        <i class="fab fa-youtube"></i> Subscribe Now
+                    </a>
+                </div>
+            </section>
+            
             <section class="contact">
                 <h2 id="contactTitle">COLLABORATE WITH FREKI</h2>
                 <p id="contactText">For business inquiries, collaborations or just to say hello!</p>
@@ -497,7 +622,6 @@
     
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        // All your JavaScript remains exactly the same
         // Language translations
         const translations = {
             en: {
@@ -869,7 +993,7 @@
             };
             
             // Button click sound
-            const buttons = document.querySelectorAll('.btn-effect, .social-icon, .email-btn, .music-btn, .language-option');
+            const buttons = document.querySelectorAll('.btn-effect, .social-icon, .email-btn, .music-btn, .language-option, .subscribe-btn');
             const clickSound = new Audio('https://www.soundjay.com/buttons/sounds/button-09.mp3');
             
             buttons.forEach(button => {
