@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://frekipubg.github.io/FrekiPubg/sitemap.xml
