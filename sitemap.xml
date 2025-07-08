@@ -1,36 +1,12 @@
 ---
 layout: null
 ---
-layout: null
-sitemap:
-  priority: 1.0
-  lastmod: 2024-06-01
-  changefreq: weekly
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for page in site.pages %}
-    {% unless page.sitemap == false %}
-    <url>
-      <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
-      {% if page.sitemap.lastmod %}
-        <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
-      {% elsif page.lastmod %}
-        <lastmod>{{ page.lastmod | date: "%Y-%m-%d" }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
-      {% endif %}
-      {% if page.sitemap.changefreq %}
-        <changefreq>{{ page.sitemap.changefreq }}</changefreq>
-      {% else %}
-        <changefreq>monthly</changefreq>
-      {% endif %}
-      {% if page.sitemap.priority %}
-        <priority>{{ page.sitemap.priority }}</priority>
-      {% else %}
-        <priority>0.5</priority>
-      {% endif %}
-    </url>
-    {% endunless %}
-  {% endfor %}
+  <url>
+    <loc>https://frekipubg.github.io/FrekiPubg/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 </urlset>
