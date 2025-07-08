@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="FrekiPubg - Best PUBG Mobile & BGMI gameplay videos, highlights, live streams. Get PUBG Mobile tips, tricks, sensitivity settings 2025, and watch epic solo vs squad clutches.">
-    <meta name="keywords" content="PUBG Mobile, BGMI, PUBG Mobile gameplay, PUBG Mobile video, PUBG Mobile updates, PUBG Mobile achievements, PUBG Mobile tips, PUBG Mobile tricks, PUBG Mobile sensitivity 2025, PUBG Mobile live, PUBG highlights, FrekiPubg">
+    <meta name="keywords" content="pubg mobile, pubg highlights, pubg gameplay, pubg video, pubg mobile shorts, pubg reels, pubg mobile update, pubg sensitivity, pubg content, frekipubg, freki, BGMI, PUBG Mobile gameplay, PUBG Mobile video, PUBG Mobile updates, PUBG Mobile achievements, PUBG Mobile tips, PUBG Mobile tricks, PUBG Mobile sensitivity 2025, PUBG Mobile live, PUBG highlights">
     <meta name="author" content="FrekiPubg">
     <meta property="og:title" content="FrekiPubg - Best PUBG Mobile Gameplay & Highlights 2025">
     <meta property="og:description" content="Watch amazing PUBG Mobile and BGMI gameplay videos, highlights, live streams. Get PUBG Mobile tips, tricks, and sensitivity settings 2025.">
@@ -17,34 +17,36 @@
     <meta name="twitter:image" content="https://scontent.fbkk29-8.fna.fbcdn.net/v/t39.30808-1/475895981_1654122801849898_9009287364131155510_n.jpg">
     <title>FrekiPubg - Best PUBG Mobile Gameplay Videos & Highlights 2025</title>
     <link rel="canonical" href="https://frekipubg.github.io/FrekiPubg/">
-    <!-- New gaming fonts -->
+    <!-- Gaming fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Rajdhani:wght@500;700&family=Audiowide&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #ff4500;
-            --secondary: #00bfff;
+            --primary: #0bf108; /* Vibrant gaming green */
+            --secondary: #0a1a19; /* Dark tactical green */
             --dark: #0a0a1a;
-            --light: #f0f8ff;
-            --accent: #ffd700;
+            --light: #fefefe; /* Pure white */
+            --accent: #0bf108; /* Matching green accent */
+            --text-dark: #0a1a19;
+            --text-light: #fefefe;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="60"><rect width="120" height="30" rx="5" fill="%23ff4500"/><text x="60" y="20" font-family="Arial" font-weight="bold" font-size="12" fill="white" text-anchor="middle">LIKE &amp; SUBSCRIBE</text></svg>'), auto;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="60"><rect width="120" height="30" rx="5" fill="%230bf108"/><text x="60" y="20" font-family="Arial" font-weight="bold" font-size="12" fill="black" text-anchor="middle">LIKE &amp; SUBSCRIBE</text></svg>'), auto;
         }
         
         a, button, .social-icon, .email-btn, .language-btn, .language-option, .music-btn {
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="60"><rect width="120" height="30" rx="5" fill="%23ffd700"/><text x="60" y="20" font-family="Arial" font-weight="bold" font-size="12" fill="black" text-anchor="middle">LIKE &amp; SUBSCRIBE</text></svg>'), pointer;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="60"><rect width="120" height="30" rx="5" fill="%230a1a19"/><text x="60" y="20" font-family="Arial" font-weight="bold" font-size="12" fill="%23fefefe" text-anchor="middle">LIKE &amp; SUBSCRIBE</text></svg>'), pointer;
         }
         
         body {
             font-family: 'Rajdhani', sans-serif;
             background: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
             background-size: cover;
-            color: var(--light);
+            color: var(--text-light);
             position: relative;
             overflow-x: hidden;
         }
@@ -56,8 +58,21 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(10, 10, 26, 0.85);
+            background: rgba(10, 26, 25, 0.92); /* Dark green overlay */
             z-index: -1;
+        }
+        
+        /* PUBG Battle Royale Background */
+        .pubg-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://wallpapers.com/images/high/playerunknown-s-battlegrounds-battle-cart-car-wvu4gjqcd3dxayn9.webp') no-repeat center center;
+            background-size: cover;
+            z-index: -2;
+            opacity: 0.4;
         }
         
         .container {
@@ -73,16 +88,20 @@
             padding: 20px 0;
             text-align: center;
             animation: fadeIn 1.5s ease-in-out;
+            position: relative;
+            z-index: 1;
         }
         
         .logo {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 3px solid var(--accent);
-            box-shadow: 0 0 20px var(--primary), 0 0 40px var(--secondary);
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 20px rgba(11, 241, 8, 0.6), 0 0 40px rgba(10, 26, 25, 0.8);
             margin-bottom: 20px;
             transition: transform 0.3s;
+            background-color: rgba(10, 26, 25, 0.7);
+            backdrop-filter: blur(5px);
         }
         
         .logo:hover {
@@ -92,20 +111,51 @@
         h1, h2, h3, .playlist-title {
             font-family: 'Bungee', cursive;
             color: var(--primary);
-            text-shadow: 2px 2px 0 var(--dark), 4px 4px 0 var(--accent);
+            text-shadow: 2px 2px 0 var(--secondary), 0 0 10px rgba(11, 241, 8, 0.4);
             margin-bottom: 10px;
+            letter-spacing: 1px;
         }
         
         h1 {
             font-size: 2.5rem;
+            background: linear-gradient(90deg, var(--primary), #07c905);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(11, 241, 8, 0.8);
+            position: relative;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: -1;
+            animation: glow 2s infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(11, 241, 8, 0.5);
+            }
+            to {
+                box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(11, 241, 8, 0.8);
+            }
         }
         
         .tagline {
             font-family: 'Audiowide', cursive;
             font-size: 1.2rem;
             margin-bottom: 20px;
-            color: var(--secondary);
-            text-shadow: 0 0 10px var(--secondary);
+            color: var(--light);
+            text-shadow: 0 0 10px rgba(254, 254, 254, 0.7);
             letter-spacing: 1px;
         }
         
@@ -121,21 +171,22 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(10, 26, 25, 0.7);
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all 0.3s;
-            border: 1px solid var(--secondary);
-            color: white;
+            border: 1px solid var(--primary);
+            color: var(--light);
             font-size: 20px;
+            backdrop-filter: blur(5px);
         }
         
         .social-icon:hover {
             background: var(--primary);
             transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 5px 15px var(--primary);
-            color: white;
+            box-shadow: 0 5px 15px rgba(11, 241, 8, 0.6);
+            color: var(--text-dark);
         }
         
         /* YouTube Subscribe Button */
@@ -158,12 +209,31 @@
             transition: all 0.3s;
             box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
             border: none;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .subscribe-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+            z-index: -1;
         }
         
         .subscribe-btn:hover {
             background: #cc0000;
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(255, 0, 0, 0.6);
+        }
+        
+        .subscribe-btn:hover::before {
+            left: 100%;
         }
         
         .subscribe-btn i {
@@ -179,18 +249,19 @@
         }
         
         .playlist-card {
-            background: rgba(20, 20, 40, 0.8);
+            background: rgba(10, 26, 25, 0.8);
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             transition: all 0.3s;
             border: 1px solid var(--primary);
             position: relative;
+            backdrop-filter: blur(5px);
         }
         
         .playlist-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(255, 69, 0, 0.4);
+            box-shadow: 0 15px 30px rgba(11, 241, 8, 0.4);
         }
         
         .playlist-card::before {
@@ -216,6 +287,7 @@
         .playlist-title {
             margin-bottom: 10px;
             font-size: 1rem;
+            color: var(--primary);
         }
         
         .playlist-desc {
@@ -225,12 +297,13 @@
         }
         
         .contact {
-            background: rgba(10, 10, 26, 0.9);
+            background: rgba(10, 26, 25, 0.9);
             padding: 30px;
             border-radius: 10px;
             margin-top: 40px;
             text-align: center;
-            border: 1px solid var(--secondary);
+            border: 1px solid var(--primary);
+            backdrop-filter: blur(5px);
         }
         
         .contact h2 {
@@ -241,7 +314,7 @@
         .email-btn {
             display: inline-block;
             background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: var(--dark);
+            color: var(--text-dark);
             padding: 12px 25px;
             border-radius: 50px;
             text-decoration: none;
@@ -251,25 +324,26 @@
             border: none;
             cursor: pointer;
             font-family: 'Rajdhani', sans-serif;
-            box-shadow: 0 5px 15px rgba(0, 191, 255, 0.4);
+            box-shadow: 0 5px 15px rgba(11, 241, 8, 0.4);
         }
         
         .email-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 69, 0, 0.6);
+            box-shadow: 0 8px 20px rgba(11, 241, 8, 0.6);
         }
         
         /* Channel Description Section */
         .channel-description {
-            background: rgba(20, 20, 40, 0.9);
+            background: rgba(10, 26, 25, 0.9);
             padding: 30px;
             border-radius: 10px;
             margin: 40px 0;
             border: 1px solid var(--primary);
+            backdrop-filter: blur(5px);
         }
         
         .channel-description h2 {
-            color: var(--accent);
+            color: var(--primary);
             margin-bottom: 20px;
             text-align: center;
         }
@@ -277,6 +351,7 @@
         .channel-description p {
             margin-bottom: 15px;
             line-height: 1.6;
+            color: var(--light);
         }
         
         .channel-features {
@@ -292,11 +367,12 @@
             margin-bottom: 10px;
             position: relative;
             padding-left: 25px;
+            color: var(--light);
         }
         
         .channel-features li:before {
             content: '✓';
-            color: var(--accent);
+            color: var(--primary);
             position: absolute;
             left: 0;
             font-weight: bold;
@@ -306,7 +382,8 @@
             text-align: center;
             padding: 30px 0;
             margin-top: 50px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(11, 241, 8, 0.3);
+            color: var(--light);
         }
         
         .particles {
@@ -324,16 +401,17 @@
             bottom: 20px;
             right: 20px;
             width: 300px;
-            background: rgba(20, 20, 40, 0.9);
+            background: rgba(10, 26, 25, 0.9);
             border-radius: 10px;
             padding: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
             border: 1px solid var(--primary);
             z-index: 100;
+            backdrop-filter: blur(5px);
         }
         
         .music-player h3 {
-            color: var(--accent);
+            color: var(--primary);
             margin-bottom: 10px;
             font-size: 1rem;
             display: flex;
@@ -349,7 +427,7 @@
         
         .music-btn {
             background: var(--primary);
-            color: white;
+            color: var(--text-dark);
             border: none;
             width: 30px;
             height: 30px;
@@ -358,10 +436,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            font-weight: bold;
         }
         
         .music-btn:hover {
             background: var(--secondary);
+            color: var(--light);
         }
         
         .language-switcher {
@@ -372,9 +452,9 @@
         }
         
         .language-btn {
-            background: rgba(20, 20, 40, 0.9);
+            background: rgba(10, 26, 25, 0.9);
             color: var(--light);
-            border: 1px solid var(--secondary);
+            border: 1px solid var(--primary);
             padding: 8px 15px;
             border-radius: 20px;
             cursor: pointer;
@@ -383,10 +463,12 @@
             gap: 8px;
             transition: all 0.3s;
             font-family: 'Rajdhani', sans-serif;
+            backdrop-filter: blur(5px);
         }
         
         .language-btn:hover {
             background: var(--primary);
+            color: var(--text-dark);
             transform: scale(1.05);
         }
         
@@ -394,13 +476,14 @@
             position: absolute;
             top: 100%;
             right: 0;
-            background: rgba(20, 20, 40, 0.95);
+            background: rgba(10, 26, 25, 0.95);
             border-radius: 10px;
             padding: 10px 0;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
             border: 1px solid var(--primary);
             display: none;
             width: 150px;
+            backdrop-filter: blur(5px);
         }
         
         .language-dropdown.show {
@@ -412,15 +495,159 @@
             cursor: pointer;
             transition: all 0.2s;
             font-family: 'Rajdhani', sans-serif;
+            color: var(--light);
         }
         
         .language-option:hover {
             background: var(--primary);
+            color: var(--text-dark);
         }
         
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* PUBG Gun Animation */
+        .pubg-gun {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            background-image: url('https://wallpapers.com/images/high/playerunknown-s-battlegrounds-battle-cart-car-wvu4gjqcd3dxayn9.webp');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .gun-1 {
+            top: 10%;
+            left: 5%;
+            transform: rotate(-20deg);
+        }
+        
+        .gun-2 {
+            bottom: 10%;
+            right: 5%;
+            transform: rotate(20deg);
+        }
+        
+        /* Grenade Blast Effect */
+        .blast {
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            background-image: url('https://wallpapers.com/images/high/playerunknown-s-battlegrounds-battle-cart-car-wvu4gjqcd3dxayn9.webp');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .blast-1 {
+            top: 30%;
+            right: 10%;
+        }
+        
+        /* Welcome Popup */
+        .welcome-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(10, 26, 25, 0.95);
+            border: 3px solid var(--primary);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 30px rgba(11, 241, 8, 0.7);
+            z-index: 1000;
+            max-width: 90%;
+            width: 400px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            animation: popIn 0.5s ease-out;
+            display: none;
+        }
+        
+        @keyframes popIn {
+            0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+            80% { transform: translate(-50%, -50%) scale(1.1); }
+            100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        }
+        
+        .welcome-popup h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-shadow: 0 0 10px rgba(11, 241, 8, 0.5);
+        }
+        
+        .welcome-popup p {
+            color: var(--light);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+        
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .popup-close:hover {
+            color: var(--primary);
+        }
+        
+        /* Visitor Counter */
+        .visitor-counter {
+            background: rgba(10, 26, 25, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+            border: 1px solid var(--primary);
+            backdrop-filter: blur(5px);
+        }
+        
+        .visitor-counter h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .counter-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--light);
+            margin: 10px 0;
+        }
+        
+        .visitor-stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .stat-item {
+            margin: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--primary);
+        }
+        
+        .stat-value {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--light);
         }
         
         @media (max-width: 768px) {
@@ -450,6 +677,19 @@
             .channel-features ul {
                 columns: 1;
             }
+            
+            .pubg-gun, .blast {
+                display: none;
+            }
+            
+            .welcome-popup {
+                width: 90%;
+                padding: 20px;
+            }
+            
+            .visitor-stats {
+                flex-direction: column;
+            }
         }
         
         /* Animated button effects */
@@ -477,7 +717,25 @@
     </style>
 </head>
 <body>
+    <!-- PUBG Battle Royale Background -->
+    <div class="pubg-bg"></div>
+    
+    <!-- PUBG Elements -->
+    <div class="pubg-gun gun-1"></div>
+    <div class="pubg-gun gun-2"></div>
+    <div class="blast blast-1"></div>
+    
     <div class="particles" id="particles-js"></div>
+    
+    <!-- Welcome Popup -->
+    <div class="welcome-popup" id="welcomePopup">
+        <button class="popup-close" id="closePopup">&times;</button>
+        <h2>Welcome Gamers!</h2>
+        <p>Thanks for visiting FrekiPubg. Don't forget to subscribe for amazing PUBG Mobile content!</p>
+        <a href="https://www.youtube.com/@FrekiPubg?sub_confirmation=1" target="_blank" class="subscribe-btn btn-effect">
+            <i class="fab fa-youtube"></i> Subscribe Now
+        </a>
+    </div>
     
     <!-- Language Switcher -->
     <div class="language-switcher">
@@ -593,6 +851,30 @@
                     <a href="https://www.youtube.com/@FrekiPubg?sub_confirmation=1" target="_blank" class="subscribe-btn btn-effect">
                         <i class="fab fa-youtube"></i> Subscribe Now
                     </a>
+                </div>
+            </section>
+            
+            <!-- Visitor Counter -->
+            <section class="visitor-counter">
+                <h3>Visitor Statistics</h3>
+                <div class="counter-value" id="totalVisitors">Loading...</div>
+                <div class="visitor-stats">
+                    <div class="stat-item">
+                        <div class="stat-label">Today</div>
+                        <div class="stat-value" id="todayVisitors">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">This Week</div>
+                        <div class="stat-value" id="weekVisitors">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">This Month</div>
+                        <div class="stat-value" id="monthVisitors">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">All Time</div>
+                        <div class="stat-value" id="allTimeVisitors">0</div>
+                    </div>
                 </div>
             </section>
             
@@ -781,7 +1063,7 @@
                     }
                 },
                 "color": {
-                    "value": ["#ff4500", "#00bfff", "#ffd700"]
+                    "value": ["#0bf108", "#0a1a19", "#fefefe"]
                 },
                 "shape": {
                     "type": "circle",
@@ -813,7 +1095,7 @@
                 "line_linked": {
                     "enable": true,
                     "distance": 150,
-                    "color": "#00bfff",
+                    "color": "#0bf108",
                     "opacity": 0.4,
                     "width": 1
                 },
@@ -860,11 +1142,138 @@
             "retina_detect": true
         });
         
+        // Visitor counter data
+        let visitorData = {
+            total: 0,
+            today: 0,
+            week: 0,
+            month: 0,
+            sources: {}
+        };
+        
+        // Function to update visitor counter display
+        function updateVisitorCounter() {
+            document.getElementById('totalVisitors').textContent = visitorData.total.toLocaleString();
+            document.getElementById('todayVisitors').textContent = visitorData.today.toLocaleString();
+            document.getElementById('weekVisitors').textContent = visitorData.week.toLocaleString();
+            document.getElementById('monthVisitors').textContent = visitorData.month.toLocaleString();
+            document.getElementById('allTimeVisitors').textContent = visitorData.total.toLocaleString();
+        }
+        
+        // Function to record a new visitor
+        function recordVisitor() {
+            // Get current date
+            const now = new Date();
+            const today = now.toISOString().split('T')[0];
+            const week = now.getWeek();
+            const month = now.getMonth() + '-' + now.getFullYear();
+            
+            // Get referrer information
+            let source = 'direct';
+            if (document.referrer) {
+                if (document.referrer.includes('google')) {
+                    source = 'google';
+                } else if (document.referrer.includes('youtube')) {
+                    source = 'youtube';
+                } else if (document.referrer.includes('facebook')) {
+                    source = 'facebook';
+                } else if (document.referrer.includes('instagram')) {
+                    source = 'instagram';
+                } else if (document.referrer.includes('tiktok')) {
+                    source = 'tiktok';
+                } else {
+                    source = 'other';
+                }
+            }
+            
+            // Try to load existing data from localStorage
+            try {
+                const savedData = localStorage.getItem('visitorData');
+                if (savedData) {
+                    visitorData = JSON.parse(savedData);
+                }
+            } catch (e) {
+                console.log('Error loading visitor data', e);
+            }
+            
+            // Check if this is a new session
+            const lastVisit = localStorage.getItem('lastVisit');
+            if (!lastVisit || lastVisit !== today) {
+                // New visitor for today
+                visitorData.total++;
+                visitorData.today++;
+                visitorData.week++;
+                visitorData.month++;
+                
+                // Update source tracking
+                if (!visitorData.sources[source]) {
+                    visitorData.sources[source] = 0;
+                }
+                visitorData.sources[source]++;
+                
+                // Save to localStorage
+                localStorage.setItem('lastVisit', today);
+                localStorage.setItem('visitorData', JSON.stringify(visitorData));
+            }
+            
+            updateVisitorCounter();
+        }
+        
+        // Add getWeek method to Date prototype
+        Date.prototype.getWeek = function() {
+            const date = new Date(this.getTime());
+            date.setHours(0, 0, 0, 0);
+            date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
+            const week1 = new Date(date.getFullYear(), 0, 4);
+            return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
+        };
+        
         // Language detection and switching
         document.addEventListener('DOMContentLoaded', function() {
             const languageBtn = document.getElementById('languageBtn');
             const languageDropdown = document.getElementById('languageDropdown');
             const currentLanguage = document.getElementById('currentLanguage');
+            const welcomePopup = document.getElementById('welcomePopup');
+            const closePopup = document.getElementById('closePopup');
+            
+            // Show welcome popup
+            setTimeout(() => {
+                welcomePopup.style.display = 'block';
+            }, 2000);
+            
+            // Close popup
+            closePopup.addEventListener('click', function() {
+                welcomePopup.style.display = 'none';
+            });
+            
+            // Play welcome audio
+            const welcomeAudio = new Audio('https://www.soundjay.com/buttons/sounds/button-09.mp3');
+            welcomeAudio.volume = 0.5;
+            
+            // Create speech synthesis for welcome message
+            function speakWelcome() {
+                if ('speechSynthesis' in window) {
+                    const msg = new SpeechSynthesisUtterance();
+                    msg.text = "Welcome to FrekiPubg! Please Like and Subscribe.";
+                    msg.volume = 1; // 0 to 1
+                    msg.rate = 1; // 0.1 to 10
+                    msg.pitch = 1; // 0 to 2
+                    
+                    // Play button sound first
+                    welcomeAudio.play();
+                    
+                    // Then speak after a short delay
+                    setTimeout(() => {
+                        window.speechSynthesis.speak(msg);
+                    }, 500);
+                } else {
+                    // Fallback to just playing the button sound
+                    welcomeAudio.play();
+                }
+            }
+            
+            // Play welcome message when popup appears
+            setTimeout(speakWelcome, 2000);
             
             // Country to language mapping
             const countryToLang = {
@@ -990,6 +1399,7 @@
             // Auto-play music on page load
             window.onload = function() {
                 musicIframe.src = 'https://www.youtube.com/embed/afFD-0TmIGg?autoplay=1&loop=1&playlist=afFD-0TmIGg';
+                recordVisitor();
             };
             
             // Button click sound
